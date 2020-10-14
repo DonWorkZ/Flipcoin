@@ -14,16 +14,18 @@ const coin = {
     },
     toHTML: function() {
         const image = document.createElement('img');
+        const title = document.createElement('h5');
     
         let img_src = this.toString()
 
-        image.src = img_src + ".png"
-        image.alt = img_src
+        image.src = "./image/" + img_src + ".png";
+        title.innerHTML = image.alt = img_src;
 
         image.width = "100";
         image.height = "100";
 
         document.getElementsByTagName('body')[0].appendChild(image);
+        document.getElementsByTagName('body')[0].appendChild(title);
 
         return image;
     }
